@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Send } from "lucide-react";
+import logoImg from "@/assets/logo-dgg.png";
 
 const navLinks = [
   { href: "#about", label: "О нас" },
@@ -33,10 +34,8 @@ const Header = () => {
       <div className="container px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">DG</span>
-            </div>
+          <a href="#" className="flex items-center gap-3">
+            <img src={logoImg} alt="DGG Logo" className="h-10 w-auto" />
             <span className="font-semibold text-foreground hidden sm:block">
               Data Global Glue
             </span>
