@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Database, Server, BarChart3, Shield, Globe } from "lucide-react";
+import { Database, Server, BarChart3, Shield, Globe, Activity } from "lucide-react";
 import { Send } from "lucide-react";
 
 const highlights = [
@@ -8,6 +8,7 @@ const highlights = [
   { icon: BarChart3, text: "Интеграции ERP, WMS, BI и витрин данных" },
   { icon: Shield, text: "Удалённое администрирование с SLA" },
   { icon: Globe, text: "Опыт enterprise-ритейла и логистики" },
+  { icon: Activity, text: "Проактивный мониторинг и предотвращение инцидентов" },
 ];
 
 const HeroSection = () => {
