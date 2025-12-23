@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import logoImg from "@/assets/logo-dgg.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo & Copyright */}
           <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">DG</span>
-            </div>
+            <img src={logoImg} alt="DGG Logo" className="h-10 w-auto" />
             <div className="text-center md:text-left">
               <div className="font-semibold text-foreground">Data Global Glue</div>
               <div className="text-sm text-muted-foreground">© 2024 Все права защищены</div>
