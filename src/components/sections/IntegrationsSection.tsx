@@ -6,6 +6,7 @@ const integrations = [
   { icon: Workflow, text: "Контроль CDC-процессов" },
   { icon: Layers, text: "ETL и витрины данных" },
   { icon: BarChart3, text: "BI-витрины и аналитика" },
+  { icon: Search, text: "Мониторинг и контроль качества данных" },
 ];
 
 const IntegrationsSection = () => {
