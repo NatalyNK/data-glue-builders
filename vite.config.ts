@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/data-glue-builders/", // ВАЖНО для собственного домена
+  base: "/", // ВАЖНО для собственного домена
   server: {
     host: "::",
     port: 8080,
