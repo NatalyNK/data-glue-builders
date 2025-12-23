@@ -17,8 +17,10 @@ const App = () => (
         <Sonner />
 
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* ГЛАВНАЯ СТРАНИЦА */}
+          <Route index element={<Index />} />
+
+          {/* ВСЕ НЕСУЩЕСТВУЮЩИЕ ПУТИ */}
           <Route path="*" element={<NotFound />} />
         </Routes>
 
