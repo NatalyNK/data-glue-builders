@@ -1,19 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Database, Server, BarChart3, Shield, Globe, Activity } from "lucide-react";
 import { Send } from "lucide-react";
-
-const highlights = [
-  { icon: Database, text: "Microsoft SQL Server (2012–2019) и PostgreSQL" },
-  { icon: Server, text: "Высоконагруженные и распределённые системы" },
-  { icon: BarChart3, text: "Интеграции ERP, WMS, BI и витрин данных" },
-  { icon: Shield, text: "Удалённое администрирование с SLA" },
-  { icon: Globe, text: "Опыт enterprise-ритейла и логистики" },
-  { icon: Activity, text: "Проактивный мониторинг и предотвращение инцидентов" },
-];
-
+const highlights = [{
+  icon: Database,
+  text: "Microsoft SQL Server (2012–2019) и PostgreSQL"
+}, {
+  icon: Server,
+  text: "Высоконагруженные и распределённые системы"
+}, {
+  icon: BarChart3,
+  text: "Интеграции ERP, WMS, BI и витрин данных"
+}, {
+  icon: Shield,
+  text: "Удалённое администрирование с SLA"
+}, {
+  icon: Globe,
+  text: "Опыт enterprise-ритейла и логистики"
+}, {
+  icon: Activity,
+  text: "Проактивный мониторинг и предотвращение инцидентов"
+}];
 const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
@@ -25,10 +33,7 @@ const HeroSection = () => {
       <div className="container relative z-10 px-4 py-20 md:py-32">
         <div className="max-w-5xl mx-auto text-center">
           {/* Logo/Brand */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border mb-8 animate-fade-in">
-            <div className="w-2 h-2 bg-primary rounded-full animate-pulse-slow" />
-            <span className="text-sm font-mono text-muted-foreground">dgg.one</span>
-          </div>
+          
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up">
@@ -47,25 +52,15 @@ const HeroSection = () => {
 
           {/* Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
-            {highlights.map((item, index) => (
-              <div
-                key={index}
-                className={`flex items-center gap-3 px-4 py-3 rounded-lg bg-secondary/30 border border-border/50 
-                  animate-fade-in-up animation-delay-${(index + 2) * 100}`}
-              >
+            {highlights.map((item, index) => <div key={index} className={`flex items-center gap-3 px-4 py-3 rounded-lg bg-secondary/30 border border-border/50 
+                  animate-fade-in-up animation-delay-${(index + 2) * 100}`}>
                 <item.icon className="w-5 h-5 text-primary flex-shrink-0" />
                 <span className="text-sm text-foreground/90 text-left">{item.text}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           {/* CTA Button */}
-          <a
-            href="https://t.me/dataGlobalGlue?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85%2C%20%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%D0%B5%D0%BC%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20dgg.one"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block animate-fade-in-up animation-delay-500"
-          >
+          <a href="https://t.me/dataGlobalGlue?text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BE%D0%B1%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B0%D1%85%2C%20%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D1%85%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%D0%B5%D0%BC%20%D1%81%D0%B0%D0%B9%D1%82%D0%B5%20dgg.one" target="_blank" rel="noopener noreferrer" className="inline-block animate-fade-in-up animation-delay-500">
             <Button variant="telegram" size="xl" className="group">
               <Send className="w-5 h-5 transition-transform group-hover:translate-x-1" />
               Перейти в Telegram-чат
@@ -76,8 +71,6 @@ const HeroSection = () => {
 
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
